@@ -6,7 +6,7 @@ const TypeStash = (() => {
       if (stash[type]) {
         return stash[type];
       } else {
-        this.stash[type] = type;
+        stash[type] = type;
         return stash[type];
       }
     },
