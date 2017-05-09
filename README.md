@@ -1,12 +1,10 @@
-# typeStash
+# type-stash
 > Redux type-management library:
 
+**Why type-stash**:
 
-
-**Why typeStash**:
-
-- typeStash removes the need for a dedicated "types" file
-- I developed this because I find the process of creating types to be disruptive
+- it removes the need for a dedicated "types" file
+- I developed this because I found the process of creating types to be disruptive
 
 ## Index:
 1. [Installation:](#installation)
@@ -19,7 +17,7 @@
 ***
 ## Installation:
 ```
-npm install --save typeStash
+npm install --save type-stash
 ```
 
 ***
@@ -30,7 +28,7 @@ npm install --save typeStash
 
 **Actions:**
 ```js
-// without typeStash:
+// Before:
 import { type__APP_RENDER } from '../App_types.js';
 
 export default (bool) => {
@@ -40,8 +38,8 @@ export default (bool) => {
   };
 };
 
-// with typeStash:
-import typeStash from 'typeStash';
+// After:
+import typeStash from 'type-stash';
 
 export default (bool) => {
   return {
@@ -53,7 +51,7 @@ export default (bool) => {
 
 **Reducers:**
 ```js
-// without typeStash:
+// Before:
 import { type__App_RENDER } from '../App_types.js';
 
 export default (state = false, action) => {
@@ -65,8 +63,8 @@ export default (state = false, action) => {
   };
 };
 
-// with typeStash:
-import typeStash from 'typeStash';
+// After:
+import typeStash from 'type-stash';
 
 export default (state = false, action) => {
   switch(action.type) {
